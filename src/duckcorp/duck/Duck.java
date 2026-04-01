@@ -11,7 +11,7 @@ import java.util.Objects;
  *   - Implémentez les méthodes abstraites dans les sous-classes
  * @author Roussille Philippe <roussille@3il.fr>
  */
-public abstract class Duck {
+public abstract class Duck implements Qualifiable {
 
     private static int counter = 0;
 
