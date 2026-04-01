@@ -168,7 +168,11 @@ public class Factory {
      * pénalise la réputation de 5 points.
      */
     public void endTurn() {
-        // TODO
-        throw new UnsupportedOperationException("TODO : Factory.endTurn()");
+        for (Machine m : machines) {
+            m.degrade();
+            if (m.needsMaintenance()) {
+                reputation = Math.max(0, reputation - 5);
+            }
+        }
     }
 }

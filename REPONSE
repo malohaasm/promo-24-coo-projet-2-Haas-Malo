@@ -1,0 +1,11 @@
+### Exercice 1
+Non, une méthode `default` peut pas accéder aux champs `private` de la classe. Elle connaît que ce qui est dans l'interface, donc elle est obligée de passer par `getQualityScore()`.
+
+### Exercice 2
+En Java on peut pas hériter de deux classes, du coup `Machine` doit être une classe pour stocker les variables (`condition`, etc). L'interface `Maintainable` sert juste à ajouter un "comportement".
+
+### Exercice 4
+`Stock<Duck>` est trop strict parce que les génériques sont invariants en Java. Avec `? extends Duck`, on peut passer un `Stock<StandardDuck>`, sinon ça compilerait juste pas.
+
+### Exercice 5
+C'est pour l'encapsulation : si on donne la liste directe, n'importe qui peut faire un `.clear()` et supprimer nos machines. Par contre, on peut toujours modifier l'état d'une machine avec ses méthodes.
